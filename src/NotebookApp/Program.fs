@@ -22,6 +22,7 @@ module Foo =
         Aardium.init()
         Aardvark.Base.Report.Verbosity <- -1
 
+
         let app = new Aardvark.Application.Slim.OpenGlApplication()
 
         let mstate, mapp = App.app.startAndGetState()
