@@ -17,4 +17,6 @@ type Model =
         currentModel    : Primitive
         cameraState     : CameraControllerState
         cnt : int
+
+        annotations     : IndexList<V3d>
     }

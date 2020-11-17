@@ -31,12 +31,11 @@ module Foo =
             MutableApp.toWebPart' app.Runtime false mapp
         ] |> ignore
 
-        let mapp2 = 
-            { mapp with ui = App.view2 mstate }
-
+        let mapp = { mapp with ui = App.viewAnnotations mstate }
         WebPart.startServer 4322 [
-            MutableApp.toWebPart' app.Runtime false mapp2
+            MutableApp.toWebPart' app.Runtime false mapp
         ] |> ignore
+
     
         Console.ReadLine() |> ignore
 

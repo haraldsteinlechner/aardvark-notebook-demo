@@ -96,6 +96,10 @@ module NotebookUtilities =
                 instances.Remove view.Port |> ignore
             | _ -> ()
 
+        member x.Update(msgs: seq<'msg>) =
+            mapp.update Guid.Empty msgs
+
+        member x.State = mstate
 
     type private Self = Self
 
